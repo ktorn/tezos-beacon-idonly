@@ -51,12 +51,8 @@
         client.getActiveAccount().then((activeAccount) => {
           if (activeAccount) {
             document.getElementById('activeAccount').innerHTML = activeAccount.address
-            document.getElementById('activeAccountNetwork').innerHTML = activeAccount.network.type
-            document.getElementById('activeAccountTransport').innerHTML = activeAccount.origin.type
           } else {
             document.getElementById('activeAccount').innerHTML = ''
-            document.getElementById('activeAccountNetwork').innerHTML = ''
-            document.getElementById('activeAccountTransport').innerHTML = ''
           }
         })
       }
@@ -69,33 +65,6 @@
         })
       }
       updateColorMode()
-
-      // // Initiate a delegate operation
-      // const delegate = () => {
-      //   client.requestOperation({
-      //     operationDetails: [
-      //       {
-      //         kind: beacon.TezosOperationType.DELEGATION,
-      //         delegate: 'tz1MJx9vhaNRSimcuXPK2rW4fLccQnDAnVKJ'
-      //       }
-      //     ]
-      //   })
-      // }
-
-      // // Initiate a delegate operation
-      // const sendToSelf = () => {
-      //   client.getActiveAccount().then((activeAccount) => {
-      //     client.requestOperation({
-      //       operationDetails: [
-      //         {
-      //           kind: beacon.TezosOperationType.TRANSACTION,
-      //           destination: activeAccount.address,
-      //           amount: '1'
-      //         }
-      //       ]
-      //     })
-      //   })
-      // }
 
       // Initiate a permission request
       const requestPermission = (callback) => {
