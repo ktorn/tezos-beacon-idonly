@@ -1,5 +1,7 @@
 # tezos-beacon-idonly
-Sample code to get a Tezos wallet address/ID via Beacon
+Sample code to get a Tezos wallet address/ID via Beacon.
+
+This example is simply taken from https://github.com/airgap-it/beacon-sdk/blob/master/example-dapp.html but stripped down to only handle wallet address/ID retrieval.
 
 ## Important:
 
